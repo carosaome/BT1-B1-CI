@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="./Assets/style.css">
+</head>
+
+<body>
+  <form action="" method="POST" class="form" id="form-1">
+    <div class="form-group">
+      <label for="fullname" class="form-label">So thu 1</label>
+      <input type="text" id="1st-num">
+
+      <span class="form-message"></span>
+    </div>
+
+    <div class="form-group">
+      <label for="fullname" class="form-label">so thu 2</label>
+      <input type="text" id="2nd-num">
+
+      <span class="form-message"></span>
+    </div>
+
+  </form>
+
+
+  <button id="btn-submit">SUBMIT</button>
+  <span id="result"></span>
+  <script src="JS/test1.js"></script>
+  <script src="JS/validator.js"></script>
+  <script>
+    Validator({
+      form: "#form-1",
+      errSelector: '.form-message',
+      rules: [
+        Validator.isNum('1st-num'),
+        Validator.isNum('2nd-num')
+      ]
+    })
+  </script>
+</body>
+
+</html>
